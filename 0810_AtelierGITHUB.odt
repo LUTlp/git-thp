@@ -1,0 +1,48 @@
+GIT et GITHUB
+
+quand on a fait add mais qu'on ne veut pas en fait, on fait git reset.
+Mais attention git reset est dangereux car destructrice de repo antérieurs aussi.
+
+On peut ajouter les fichier un par un, bien séparer les commit par sujet
+git diff pour visualiser toutes les différences entre index modifiés
+git diff --cached pour voir les modif faites dans les fichiers qui ont déjà été mis dans git diff
+
+git add patch permet de choisir au fur et a mesure ce qu'on veut commiter : il demande pour chaque modification si on veut l'ajouter dans la branche sur laquelle on est.
+Pour ajouter des fichiers particuliers git add nomdufichier. ex : git add config/routes.rb
+
+Commentaires git commit:
+on peut vouloir mettre un commentaires assez long. On tape git commit et ça ouvre l'editeur de texte. Par défaut il ouvre Vim mais ça se paramètre
+
+Historique de commit
+le voir : git log donne tout l'historique des commit
+git reset --hard pour effacer le dernier commit et efface les modifications DANS LE DOSSIER de l'appli.
+git reset --hard avec le SHA pour préciser où on veut revenir, TOUT CE QUI A ETE FAIT APRES DISPARAIT A TOUT JAMAIS.
+
+Les outils utiles pour les editeur
+Git package qui identifie les lignes modifiées
+
+LES BRANCHES
+on les voit avec la commmandes ```git branch```
+pour creer la branche git branch nomdelabranche
+pour aller sur la branche git checkout nomdelabranche
+pour creer et aller sur la branche : git checkout -b nomdelabranche
+
+on a les mêmes commit
+
+
+Relier les branches avec GIT MERGE:
+1) Merger en local
+git checkout nombranchemaster : pour aller sur la branche principale
+git merge nombranche2 : la 2ème branche devient la branche principale, s'il n'y a pas de conflits.
+
+2) Merger en pull request (sur github par ex)
+merge se fait sur github
+PENSER A PULL la nouvelle branche master locale pour être en phase avec le git hub AVANT de recommencer à travailler,  c'est-à-dire créer une nouvelle branche.
+On clique sur les branch, on clique sur pull request et on fait les 4 confirmations nécessaires.
+
+
+Le fork êrmet de coopier un projet sur lesquels on a pas les droits pour pusher
+
+
+GIT STASH
+pour pouvoir changer de branche mais qu'on ne veut pas commit le travail en cours, on fait git stash avant de changer de branche puis on fait git stash pop quand on revient pour récupérer le travail qui était en cours.
