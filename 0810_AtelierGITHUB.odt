@@ -19,7 +19,10 @@ git reset --hard pour effacer le dernier commit et efface les modifications DANS
 git reset --hard avec le SHA pour préciser où on veut revenir, TOUT CE QUI A ETE FAIT APRES DISPARAIT A TOUT JAMAIS.
 
 Les outils utiles pour les editeur
-Git package qui identifie les lignes modifiées
+Git package qui identifie les lignes modifiées.
+POUR VOIR LES DIFFÉRENCES ENTRE COMMITS
+`git log` puis un `git checkout ColleIciTonSHA` devrait t'aider à tester si ce commit fonctionnait ou pas.
+Enfin un coup de doc sur la commande `git diff` te permettra de savoir ce qui a changé dans l'intégralité des fichiers à l'index.
 
 LES BRANCHES
 on les voit avec la commmandes ```git branch```
@@ -46,3 +49,4 @@ Le fork êrmet de coopier un projet sur lesquels on a pas les droits pour pusher
 
 GIT STASH
 pour pouvoir changer de branche mais qu'on ne veut pas commit le travail en cours, on fait git stash avant de changer de branche puis on fait git stash pop quand on revient pour récupérer le travail qui était en cours.
+
